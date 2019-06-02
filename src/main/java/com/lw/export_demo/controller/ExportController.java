@@ -1,8 +1,9 @@
 package com.lw.export_demo.controller;
 
-import com.github.liaochong.myexcel.core.DefaultExcelBuilder;
-import com.github.liaochong.myexcel.utils.AttachmentExportUtil;
+
 import com.lw.export_demo.entity.ArtCrowd;
+import com.lw.export_demo.excel.core.DefaultExcelBuilder;
+import com.lw.export_demo.excel.utils.AttachmentExportUtil;
 import com.lw.export_demo.service.ExportService;
 import org.apache.poi.ss.usermodel.Workbook;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -32,7 +33,7 @@ public class ExportController {
         List<ArtCrowd> dataList = this.getDataList();
         Workbook workbook = DefaultExcelBuilder.of(ArtCrowd.class)
                 .build(dataList);
-        AttachmentExportUtil.export(workbook, "艺术生信息", response);
+        AttachmentExportUtil.export(workbook, "艺术生信息.xls", response);
         // 加密导出AttachmentExportUtil.encryptExport(workbook, "艺术生信息", response,"123456");
 
     }
@@ -66,7 +67,7 @@ public class ExportController {
     // 数据获取
     private List<ArtCrowd> getDataList() {
         List<ArtCrowd> dataList = new ArrayList<>(1000);
-        for (int i = 0; i < 1000; i++) {
+        for (int i = 0; i < 100000; i++) {
             ArtCrowd artCrowd = new ArtCrowd();
             if (i % 2 == 0) {
                 artCrowd.setName("张三");
