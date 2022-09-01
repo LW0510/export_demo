@@ -20,7 +20,7 @@
 		<!--excel相关-->
 		<poi.version>4.1.0</poi.version>
 		<lombok.version>1.18.8</lombok.version>
-		<jsoup.version>1.12.1</jsoup.version>
+		<jsoup.version>1.15.3</jsoup.version>
 		<beetl.version>2.9.9</beetl.version>
 	</properties>
 
