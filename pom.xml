@@ -21,7 +21,7 @@
 		<poi.version>4.1.0</poi.version>
 		<lombok.version>1.18.8</lombok.version>
 		<jsoup.version>1.12.1</jsoup.version>
-		<beetl.version>2.9.9</beetl.version>
+		<beetl.version>3.15.13.RELEASE</beetl.version>
 	</properties>
 
 	<dependencies>
